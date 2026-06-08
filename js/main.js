@@ -157,4 +157,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
     renderReview();
   }
+
+  // --- Homepage Estimate Address Toggle ---
+  const addressToggle = document.getElementById('home-address-toggle');
+  const addressField = document.getElementById('home-address-field');
+  const addressInput = document.getElementById('home-address');
+
+  if (addressToggle && addressField && addressInput) {
+    const syncAddressField = () => {
+      const shouldShowAddress = addressToggle.checked;
+      addressField.hidden = !shouldShowAddress;
+      addressInput.disabled = !shouldShowAddress;
+
+      if (shouldShowAddress) {
+        addressInput.focus();
+      } else {
+        addressInput.value = '';
+      }
+    };
+
+    addressToggle.addEventListener('change', syncAddressField);
+    syncAddressField();
+  }
 });
