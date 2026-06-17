@@ -12,7 +12,7 @@ class SiteHeader extends HTMLElement {
       <div class="header-top-bar">
         <div class="container">
           <div class="header-reviews">
-            <span>
+            <span class="review-desktop">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="#FABB05" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
               <svg width="14" height="14" viewBox="0 0 24 24" fill="#FABB05" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
               <svg width="14" height="14" viewBox="0 0 24 24" fill="#FABB05" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
@@ -20,13 +20,21 @@ class SiteHeader extends HTMLElement {
               <svg width="14" height="14" viewBox="0 0 24 24" fill="#FABB05" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
               <span style="margin-left: 4px;"><strong>5.0</strong> Google Reviews</span>
             </span>
-            <span>
+            <span class="review-desktop">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="#FABB05" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
               <svg width="14" height="14" viewBox="0 0 24 24" fill="#FABB05" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
               <svg width="14" height="14" viewBox="0 0 24 24" fill="#FABB05" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
               <svg width="14" height="14" viewBox="0 0 24 24" fill="#FABB05" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
               <svg width="14" height="14" viewBox="0 0 24 24" fill="#FABB05" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
               <span style="margin-left: 4px;"><strong>5.0</strong> Facebook Reviews</span>
+            </span>
+            <span class="review-mobile" style="display: none;">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="#FABB05" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="#FABB05" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="#FABB05" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="#FABB05" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="#FABB05" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+              <span style="margin-left: 4px;"><strong>5.0</strong> Google & Facebook Reviews</span>
             </span>
           </div>
           <div class="header-socials">
@@ -52,11 +60,11 @@ class SiteHeader extends HTMLElement {
               <a href="${rootPath}index.html" class="nav-link" ${isActive('index.html')}>HOME</a>
             </li>
             <li class="nav-item has-dropdown">
-              <div class="nav-link-wrapper" style="display: flex; align-items: center; width: 100%;">
-                <a href="${rootPath}services.html" class="nav-link" style="flex-grow: 1;" ${isActive('services.html')}>SERVICES</a>
-                <button class="mobile-accordion-toggle" aria-expanded="false" aria-label="Toggle Services Menu">
+              <div class="nav-link-wrapper mobile-accordion-toggle" aria-expanded="false" style="display: flex; align-items: center; justify-content: center; width: 100%; position: relative; cursor: pointer;">
+                <a href="${rootPath}services.html" class="nav-link" style="margin: 0; padding-right: 0; flex-grow: 0;" ${isActive('services.html')}>SERVICES</a>
+                <span class="mobile-chevron" style="position: absolute; right: 0; pointer-events: none;">
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
-                </button>
+                </span>
               </div>
               <ul class="dropdown-menu">
                 <li><a href="${rootPath}services/home-cleaning.html" class="dropdown-link">Home Cleaning</a></li>

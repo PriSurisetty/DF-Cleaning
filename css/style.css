@@ -2423,6 +2423,10 @@
     transform: rotate(-45deg) translate(6px, -6px);
   }
 
+  .nav-item.has-dropdown .nav-link::after {
+    display: none !important;
+  }
+
   /* Nav menu converts to slide-down overlays */
   .main-nav {
     position: absolute;
@@ -2494,10 +2498,23 @@
   }
 
   .hero-section {
-    height: 100dvh;
-    padding-block-start: 5rem; /* Reduced spacing on mobile */
-    padding-block-end: 34vh;
-    background-position: center 28%;
+    height: auto;
+    min-height: 100dvh;
+    padding-block-start: 6rem;
+    padding-block-end: 2rem;
+    background-position: center;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .hero-title {
+    font-size: clamp(1.75rem, 8vw, 2.5rem);
+    text-align: center;
+  }
+
+  .hero-badge,
+  .hero-subtitle {
+    text-align: center;
   }
 
   .hero-buttons {
@@ -2635,6 +2652,11 @@
 
   .footer-brand {
     max-inline-size: 100%;
+  }
+
+  .logo-link {
+    block-size: 50px;
+    transform: translateX(8px); /* Move logo slightly to the right */
   }
 }
 
@@ -3424,7 +3446,7 @@
 }
 
 @media (min-width: 1025px) {
-  .mobile-accordion-toggle {
+  .mobile-accordion-toggle, .mobile-chevron {
     display: none !important;
   }
 }
@@ -3508,10 +3530,24 @@
 }
 
 @media (max-width: 768px) {
+  .review-desktop {
+    display: none !important;
+  }
+  .review-mobile {
+    display: flex !important;
+    align-items: center;
+  }
+  .review-mobile > span {
+    display: flex;
+    align-items: center;
+    line-height: 1;
+    position: relative;
+    top: 1px; /* Optical adjustment to center text vertically with stars */
+  }
   .header-reviews {
     font-size: 0.75rem;
     gap: 0.5rem;
-    flex-direction: column;
+    align-items: center;
   }
 }
 
@@ -3595,6 +3631,21 @@
   }
   .form-row-hero .form-group[style*="grid-column"] {
     grid-column: span 1 !important;
+  }
+  .hero-section .container {
+    width: 100%;
+  }
+  .sticky-quote-form {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    transform: translateY(30px);
+    width: 100%;
+    margin-top: 3rem;
+    box-sizing: border-box;
+  }
+  .sticky-quote-form.visible {
+    transform: translateY(0);
   }
 }
 /* =========================================

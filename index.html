@@ -7,6 +7,7 @@
   <meta name="description" content="Professional residential and commercial cleaning services across Texas with exceptional care. Get a free estimate today!">
   <link rel="stylesheet" href="css/style.css">
   <script src="js/header.js" defer></script>
+  <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
 </head>
 <body class="global-bg">
 
@@ -41,7 +42,7 @@
     </section>
 
     <!-- TEAM PREVIEW -->
-    <section class="team-preview" id="meet-the-team" aria-labelledby="team-preview-title">
+    <section class="team-preview reveal-up" id="meet-the-team" aria-labelledby="team-preview-title">
       <div class="container">
         <div class="team-preview-header">
           <h2 class="team-preview-title" id="team-preview-title">A Team You Can <em>Trust In Your Home.</em></h2>
@@ -79,7 +80,7 @@
     </section>
 
     <!-- SERVICES PREVIEW -->
-    <section class="home-services" id="services-preview" aria-labelledby="home-services-title">
+    <section class="home-services reveal-up" id="services-preview" aria-labelledby="home-services-title">
       <div class="container home-services-grid">
         <div class="home-services-copy">
           <span class="home-services-kicker">Our Services</span>
@@ -185,7 +186,7 @@
     </section>
 
     <!-- CLIENT REVIEWS -->
-    <section class="reviews-section" id="client-reviews" aria-labelledby="reviews-title">
+    <section class="reviews-section reveal-up" id="client-reviews" aria-labelledby="reviews-title">
       <div class="container reviews-container">
         <div class="reviews-header">
           <h2 class="reviews-title" id="reviews-title">What Our Clients Say</h2>
@@ -219,19 +220,28 @@
         <div class="review-dots" aria-label="Review carousel position" data-review-dots></div>
 
         <div class="ratings-bar" aria-label="DF Cleaning ratings summary">
-          <div class="rating-source">
+          <div class="rating-source review-desktop">
             <div class="rating-logo google-logo" aria-hidden="true">G</div>
             <div>
               <p class="rating-score">5.0 <span aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span></p>
               <p class="rating-label">Google Reviews</p>
             </div>
           </div>
-          <div class="rating-divider" aria-hidden="true"></div>
-          <div class="rating-source">
+          <div class="rating-divider review-desktop" aria-hidden="true"></div>
+          <div class="rating-source review-desktop">
             <div class="rating-logo facebook-logo" aria-hidden="true">f</div>
             <div>
               <p class="rating-score">5.0 <span aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span></p>
               <p class="rating-label">Facebook Reviews</p>
+            </div>
+          </div>
+          
+          <div class="rating-source review-mobile" style="display: none; justify-content: center; width: 100%;">
+            <div style="text-align: center;">
+              <p class="rating-score" style="display: flex; justify-content: center; gap: 8px;">
+                5.0 <span aria-hidden="true" style="color: #FABB05;">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+              </p>
+              <p class="rating-label">Google & Facebook Reviews</p>
             </div>
           </div>
         </div>
@@ -239,7 +249,7 @@
     </section>
 
     <!-- GET ESTIMATE -->
-    <section class="estimate-section" id="get-estimate" aria-labelledby="estimate-title">
+    <section class="estimate-section reveal-up" id="get-estimate" aria-labelledby="estimate-title">
       <div class="container estimate-container">
         <div class="estimate-card">
           <div class="estimate-intro">

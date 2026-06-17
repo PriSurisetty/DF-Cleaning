@@ -241,22 +241,24 @@ document.addEventListener('DOMContentLoaded', () => {
   const accordionToggles = document.querySelectorAll('.mobile-accordion-toggle');
   accordionToggles.forEach(toggle => {
     toggle.addEventListener('click', function(e) {
-      e.preventDefault();
-      e.stopPropagation();
-      
-      const isExpanded = this.getAttribute('aria-expanded') === 'true';
-      this.setAttribute('aria-expanded', !isExpanded);
-      
-      const dropdownMenu = this.nextElementSibling;
-      if (dropdownMenu && dropdownMenu.classList.contains('dropdown-menu')) {
-        dropdownMenu.classList.toggle('active');
+      if (window.innerWidth <= 768) {
+        e.preventDefault();
+        e.stopPropagation();
+        
+        const isExpanded = this.getAttribute('aria-expanded') === 'true';
+        this.setAttribute('aria-expanded', !isExpanded);
+        
+        const dropdownMenu = this.nextElementSibling;
+        if (dropdownMenu && dropdownMenu.classList.contains('dropdown-menu')) {
+          dropdownMenu.classList.toggle('active');
+        }
       }
     });
   });
-  // --- Gallery Page: Lenis Smooth Scroll ---
+  // --- Global Lenis Smooth Scroll ---
   const isReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   let lenis;
-  if (typeof Lenis !== 'undefined' && !isReducedMotion && document.getElementById('smooth-wrapper')) {
+  if (typeof Lenis !== 'undefined' && !isReducedMotion) {
     lenis = new Lenis({
       duration: 1.2,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
