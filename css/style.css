@@ -2613,12 +2613,31 @@
     padding: 0 !important;
   }
 
+  .team-person-card,
+  .team-main-photo {
+    margin: 0 auto !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    justify-self: center !important;
+    transform: none !important;
+    left: 0 !important;
+    right: 0 !important;
+  }
+
   .team-preview::before,
   .team-preview::after,
   .team-person-card--darwin::before,
   .team-person-card--alejandra::before,
   .team-showcase-grid::after {
     display: none !important;
+  }
+
+  .team-person-photo picture,
+  .team-person-photo img,
+  .team-main-photo picture,
+  .team-main-photo img {
+    display: block !important;
+    width: 100% !important;
   }
 
   .home-services {
@@ -2764,7 +2783,10 @@
   .team-showcase-grid {
     grid-template-columns: 1fr;
     margin-inline: auto;
-    max-inline-size: 420px;
+    max-width: 400px;
+    max-inline-size: 400px;
+    justify-self: center;
+    width: 100%;
   }
 
   .team-main-photo {
