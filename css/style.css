@@ -2517,7 +2517,7 @@
 
   .hero-section {
     height: auto;
-    min-height: 100dvh;
+    min-height: 80dvh;
     padding-block-start: 6rem;
     padding-block-end: 2rem;
     background-position: center;
@@ -2526,8 +2526,9 @@
   }
 
   .hero-title {
-    font-size: clamp(1.75rem, 8vw, 2.5rem);
+    font-size: clamp(2.5rem, 11.5vw, 3.25rem);
     text-align: center;
+    line-height: 1.1;
   }
 
   .hero-badge,
