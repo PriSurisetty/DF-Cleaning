@@ -456,7 +456,7 @@ class SiteContactForm extends HTMLElement {
           <!-- Message -->
           <div class="form-group">
             <label for="details" class="form-label">Special Instructions or Details</label>
-            <textarea id="details" name="details" class="form-control" rows="4" placeholder="Tell us more about your space, specific areas of focus, or preferred dates..."></textarea>
+            <textarea id="details" name="details" class="form-control" rows="4" placeholder="Tell us more about your space or specific areas of focus..."></textarea>
           </div>
 
           <!-- Submit Button -->
