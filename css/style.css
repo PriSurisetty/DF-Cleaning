@@ -4704,18 +4704,20 @@ form .btn-primary:hover {
   height: 100%;
   object-fit: cover;
   object-position: center;
-  opacity: 0.15;
+  opacity: 1;
   z-index: 0;
 }
 
-/* Gradient overlay to soften the image */
+/* Uniform frosted overlay to make text readable */
 .estimate-bg-overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, rgba(246, 251, 254, 0.95) 0%, rgba(246, 251, 254, 0.6) 50%, rgba(10, 36, 66, 0.05) 100%);
+  background-color: rgba(246, 251, 254, 0.7);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
   z-index: 1;
 }
 
@@ -4970,7 +4972,7 @@ textarea.estimate-input {
   }
   
   .estimate-bg-overlay {
-    background: linear-gradient(180deg, rgba(246, 251, 254, 0.95) 0%, rgba(246, 251, 254, 0.8) 100%);
+    background-color: rgba(246, 251, 254, 0.85); /* Slightly more opaque on mobile for better readability */
   }
 
   .estimate-page-wrapper {
