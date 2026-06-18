@@ -405,7 +405,13 @@ class SiteContactForm extends HTMLElement {
     const rootPath = this.getAttribute("root-path") || "";
     const isHero = this.hasAttribute("hero");
     const isInline = this.hasAttribute("inline");
+    const isEstimatePage = this.hasAttribute("estimate-page");
     
+    const formTitleHtml = `<div style="text-align: center; margin-block-end: 0.5rem;">
+          <h2 style="font-family: var(--font-sans); color: var(--color-navy-dark); font-size: 1.75rem; margin-top: 0;">Get a Free Quote</h2>
+          <p style="color: var(--color-gray-dark); margin-block-start: 0.5rem;">Request your free cleaning quote today!</p>
+        </div>`;
+
     const formHtml = `
         <form action="https://formsubmit.co/alejandra.fajardo71@gmail.com" method="POST" id="cleaning-estimate-form">
           <input type="hidden" name="_cc" value="darwinfajardo76@gmail.com">
@@ -469,17 +475,21 @@ class SiteContactForm extends HTMLElement {
     
     if (isHero) {
       this.innerHTML = formHtml;
-    } else if (isInline) {
+    } else if (isEstimatePage) {
       this.innerHTML = `
         <div class="estimate-form-wrapper" style="background-color: var(--color-white); border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.1); padding: 1rem; border: 2px solid var(--color-teal);">
           ${formHtml}
         </div>
       `;
+    } else if (isInline) {
+      this.innerHTML = `
+        <div class="estimate-form-wrapper" style="background-color: var(--color-white); border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.1); padding: 2rem; border: 2px solid var(--color-teal);">
+          ${formTitleHtml}
+          ${formHtml}
+        </div>
+      `;
     } else {
-      const formTitleHtml = `<div style="text-align: center; margin-block-end: 0.5rem;">
-          <h2 style="font-family: var(--font-sans); color: var(--color-navy-dark); font-size: 1.75rem; margin-top: 0;">Get a Free Quote</h2>
-          <p style="color: var(--color-gray-dark); margin-block-start: 0.5rem;">Request your free cleaning quote today!</p>
-        </div>`;
+
 
       this.innerHTML = `
         <section class="global-cta-section" style="padding-block: 4rem; background-color: transparent;">
