@@ -1003,9 +1003,10 @@
 
   .reviews-subtitle {
     color: var(--color-text-main);
-    font-size: clamp(0.9rem, 0.86rem + 0.16vw, 1rem);
-    line-height: 1.45;
-    margin-block-start: 0.45rem;
+    font-size: clamp(1rem, 0.95rem + 0.5vw, 1.25rem);
+    line-height: 1.5;
+    margin-block-start: 1rem;
+    margin-block-end: 2rem;
   }
 
   .reviews-carousel {
