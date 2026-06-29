@@ -757,7 +757,7 @@
   }
 
   .team-person-card--darwin img {
-    object-position: center 2%;
+    object-position: center 20%;
   }
 
   .team-person-card--alejandra img {
@@ -5189,5 +5189,110 @@ textarea.estimate-input {
   
   .custom-ig-nav {
     display: none; /* Hide arrows on mobile, encourage swipe */
+  }
+}
+
+/* ==========================================================================
+   Holiday Announcement Banner (4th of July)
+   ========================================================================== */
+.holiday-banner {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 320px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(12, 35, 64, 0.1);
+  border-radius: 16px;
+  padding: 1.25rem 1.5rem 1.5rem;
+  box-shadow: 0 20px 40px rgba(12, 35, 64, 0.15);
+  z-index: 10000;
+  text-align: center;
+  transition: opacity 0.4s ease, transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  opacity: 0;
+  transform: translateY(20px);
+  pointer-events: none;
+}
+
+.holiday-banner.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.holiday-banner-close {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(12, 35, 64, 0.05);
+  color: var(--color-navy-dark);
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+  line-height: 1;
+}
+
+.holiday-banner-close:hover {
+  background: rgba(12, 35, 64, 0.1);
+  color: #d9383a;
+}
+
+.holiday-banner-decor {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.holiday-banner-decor .star {
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.holiday-banner-decor .red-star {
+  color: #d9383a; /* Subtle patriotic red */
+}
+
+.holiday-banner-decor .white-star {
+  color: var(--color-navy-dark);
+  opacity: 0.3; /* Greyish navy for contrast on light background */
+}
+
+.holiday-banner-decor .blue-star {
+  color: var(--color-blue); /* Site's blue */
+}
+
+.holiday-banner-title {
+  font-family: var(--font-serif);
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: var(--color-navy-dark);
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.01em;
+}
+
+.holiday-banner-text {
+  font-family: var(--font-ui);
+  font-size: 0.88rem;
+  line-height: 1.5;
+  color: var(--color-text-main);
+  margin: 0;
+}
+
+@media (max-width: 480px) {
+  .holiday-banner {
+    bottom: 1rem;
+    right: 1rem;
+    left: 1rem;
+    width: auto;
+    max-width: none;
+    padding: 1.25rem;
   }
 }
